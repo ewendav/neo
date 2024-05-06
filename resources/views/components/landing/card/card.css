@@ -1,0 +1,200 @@
+.landing-card{
+
+    background-color: rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", "sans-serif";
+    color: whitesmoke;
+
+    box-sizing: border-box;
+    padding: 1.2vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    transition: outline 1s ease;
+    outline: 0.16vw solid transparent;
+}
+
+.landing-logo-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-logo{
+    width: 35vw;
+    height: auto;
+}
+
+.landing-card-button{
+    width: 3vw;
+    height: auto;
+}
+
+.landing-card-left, .landing-card-right{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.landing-card-up{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-size: 1.7vw;
+    font-weight: bold;
+    width: 50px;
+}
+
+.landing-card-title{
+    font-size : 3.7vw;
+    font-weight: bold;
+}
+
+.landing-card-description{
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #d6d4d4;
+    line-height: 1.4;
+}
+
+.card-arrow{
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+}
+
+.toggle{
+    .card-arrow-inside{
+        animation: clickedArrow 200ms 0s 2 alternate;
+    }
+}
+
+@keyframes clickedArrow {
+    to{
+        transform: translateX(2vw);
+
+    }
+}
+
+.card-arrow-inside{
+    fill: white;
+    transition: fill 800ms ease, transform 200ms 2 alternate;
+}
+.card-arrow-outside{
+    transition: fill 800ms ease;
+    fill: transparent;
+}
+
+:root {
+    --transparency: 0.5;
+}
+.tricot{
+    background: rgb(0,0,0);
+    background: linear-gradient(307deg, rgba(0, 0, 0, var(--transparency)), rgba(176, 114, 42, var(--transparency)));
+}
+.couture{
+    background: rgb(0,0,0);
+    background: linear-gradient(227deg, rgba(0, 0, 0, var(--transparency)), rgba(1, 64, 137, var(--transparency)));
+}
+.durable{
+    background: rgb(0,0,0);
+    background: linear-gradient(30deg, rgba(13, 162, 176, var(--transparency)), rgba(0, 0, 0, var(--transparency)));
+}
+
+.couture:hover{
+    outline: 0.16vw solid #0073ff;
+    .card-arrow-inside{
+        fill:  #0073ff;
+    }
+}
+.durable:hover{
+    outline: 0.16vw solid #00ffc8;
+    .card-arrow-inside{
+        fill: #00b994;
+    }
+}
+.tricot:hover  {
+    outline: 0.16vw solid #fed4a4;
+    .card-arrow-inside{
+        fill: #ffae54;
+    }
+}
+
+.couture , .durable, .tricot{
+    cursor: pointer;
+}
+
+
+.landing-card:hover{
+
+    .card-arrow-outside{
+        fill: white;
+    }
+
+    .imagecouture{
+        transform: rotate(10deg);
+        scale: 1.2;
+        right: .5vw;
+    }
+
+    .imagedurable{
+        transform: rotate(90deg);
+        right: 2.5vw;
+        scale: 1.2;
+    }
+    .imagetricot{
+        transform: rotate(-10deg);
+        right: 4vw;
+        scale: 1.15;
+    }
+
+}
+
+.landing-card-image{
+    position: absolute;
+    margin-right: 2vw;
+
+    width: 13.5vw;
+    right: 2vw;
+    height: auto;
+    transition: transform 1s ease, scale 1s  ease, right 1s  ease;
+}
+
+
+.imagecouture{
+    top: 2vw;
+    right: -1vw;
+    width: 20vw;
+}
+
+.imagedurable{
+    top: 2.5vw;
+    right: 3vw;
+    width: 14vw;
+    will-change: scale;
+    transition: transform 1s ease, scale 1s  ease, right 1s  ease;
+}
+
+.imagetricot{
+    top: 2vw;
+    right: 3vw;
+    width: 16vw;
+    will-change: scale;
+    transition: transform 1s ease, scale 1s  ease, right 1s  ease;
+}
+
+.landing-card-down{
+    display: flex;
+    justify-content: end;
+    align-content: end;
+}
+
